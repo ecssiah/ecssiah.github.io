@@ -1,10 +1,10 @@
 # Site settings
-title: 
+title: Righting Code
 header-img: img/home-bg.png
 email: ecssiah@gmail.com
 copyright_name: ecssiah
 description: > # this means to ignore newlines until "baseurl:"
-  
+  An exploration of the process
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  ecssiah
