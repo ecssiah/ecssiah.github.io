@@ -34,6 +34,6 @@ The article had a very simple solution to this problem. When calculating the sco
 
 This is why you wouldn't want to use +1, -1, and zero. You would have to subtract something like 0.1 from each score for each layer of depth. It makes more sense to simply subtract the actual number of turns, which is a clean whole number. Finally, make sure to subtract the number of turns from the AI's score but *add* the number of turns to the opposing player's scores. Their scores are negative, so to make those scores less important to the algorithm, they need to be moved closer to zero, which means adding.
 
-If you implement this algorithm correctly, then two computer players facing each other will **always** draw. It's impressive to look at the number of moves the algorithm has to search through when looking at a board. There are thousands of possible games it needs to look through.
+If you implement this algorithm correctly, then two computer players facing each other will **always** draw. It's impressive to look at the number of moves the algorithm has to search through when looking at a board. There are thousands of possible games it needs to consider.
 
 
