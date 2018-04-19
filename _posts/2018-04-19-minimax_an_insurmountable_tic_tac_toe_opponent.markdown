@@ -14,6 +14,6 @@ The basic premise is that the algorithm plays out every move available at each s
 
 The easiest first step to understanding how this works is to look at a game that is almost over, because there is only a few decisions left to make.
 
-![Tic Tac Toe Decision](https://imgur.com/PduYtGR)
+![Tic Tac Toe Image](https://imgur.com/PduYtGR)
 
 
