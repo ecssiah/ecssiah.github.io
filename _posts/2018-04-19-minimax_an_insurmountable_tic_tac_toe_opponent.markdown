@@ -6,7 +6,7 @@ permalink:  minimax_an_insurmountable_tic_tac_toe_opponent
 ---
 
 
-When the introduction to the lab hinted there was an unbeatable AI algorithm for Tic Tac Toe, but it would be awkward and difficult to implement, I knew I had to do it. It didn't take long to find a few excellent articles that explained clearly how the minimax algorithm chooses the perfect strategy. Now I just had to fit it into the established framework of the lab.
+When the introduction to the lab hinted there was an unbeatable AI algorithm for Tic Tac Toe, but it would be challenging to implement, I knew I had to do it. It didn't take long to find a few excellent articles that explained how the minimax algorithm chooses the perfect strategy. Now I just had to fit this into the framework of the lab.
 
 It's not that hard to understand *what* minimax is doing, but it may be a little harder to understand *how* it is doing it.
 
