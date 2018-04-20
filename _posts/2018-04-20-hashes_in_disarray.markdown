@@ -15,7 +15,7 @@ arr => [{}, {}, {}]
 
 But you know what they say about looks.
 
-The difference only appears once you add a new key into one of the hashes in the Array. Now, you'll get two different results, proving that the Arrays were actually different in some way.
+The difference only appears once you add a new key into one of the hashes in the array. Now, you'll get two different results, proving that the arrays were actually different in some way.
 
 ```
 arr = Array.new(3) { {} }
@@ -57,4 +57,4 @@ Maybe that should be in bold.
 
 Or maybe I should read a little more closely.
 
-Either way, the lesson here is to remember that the same object can sometimes have more than one name in Ruby. If you need to create an Array that is filled with **unique** hashes, then you have to pass the `Array.new` method a block that instantiates a new Hash either literally or with `Hash.new`. Even calling `Hash.new` as the second parameter to `Array.new` is not good enough. It will simply create *one* new Hash object and then refer to it for each array element.
+Either way, the lesson here is to remember that the same object can sometimes have more than one name in Ruby. If you need to create an array that is filled with **unique** hashes, then you have to pass the `Array.new` method a block that instantiates a new Hash either literally or with `Hash.new`. Even calling `Hash.new` as the second parameter to `Array.new` is not good enough. It will simply create *one* new Hash object and then refer to it for each array element.
