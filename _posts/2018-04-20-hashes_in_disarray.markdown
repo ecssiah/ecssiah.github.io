@@ -10,7 +10,7 @@ In Ruby, there is a subtle difference between these two calls: `Array.new(3, {})
 If you look at the contents of both objects after creating them, they will look identical.
 
 ```
-arr => [{}, {}, {}]
+[{}, {}, {}]
 ```
 
 But you know what they say about looks.
@@ -25,7 +25,7 @@ arr[0][:test_key] = "test string"
 In this case, you probably get exactly what you were expecting.
 
 ```
-arr => [{:test_key=>"test string"}, {}, {}]
+[{:test_key=>"test string"}, {}, {}]
 ```
 
 A new key/value pair has been added to the first hash in the array.
@@ -42,7 +42,7 @@ arr[0][:test_key] = "test string"
 The second line is identical. There is no trick there. It performs the exact same operation. The same key/value pair has been added to the first hash in the array, but this is the output:
 
 ```
-arr => [{:test_key=>"test string"}, {:test_key=>"test string"}, {:test_key=>"test string"}]
+[{:test_key=>"test string"}, {:test_key=>"test string"}, {:test_key=>"test string"}]
 ```
 
 Now can you tell what is happening? It took me a good 20 minutes to figure out how the two other hashes were being filled with identical key/value pairs.
