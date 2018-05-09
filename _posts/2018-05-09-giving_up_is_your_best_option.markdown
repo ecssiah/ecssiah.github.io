@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Giving Up Is Your Best Option"
-date:       2018-05-09 17:22:30 +0000
+date:       2018-05-09 13:22:31 -0400
 permalink:  giving_up_is_your_best_option
 ---
 
@@ -28,6 +28,6 @@ Complicated code often means you're doing something in a hacky way, and that can
 
 There is a famous trap called the "Sunk Cost Fallacy". If someone has bet a large amount of money on a hand, it can often feel to them that it would be stupid to fold, because it would mean they would waste all of the money they put in. This leads them to continue betting money on what is likely a lost cause...therefore, leading them to lose even more money than they would have lost if they simply cut ties and folded.
 
-After two days of work on this project (without really even getting started on the basic requirements), I decided that the most productive thing I could do was give up. Of course, this didn't mean throwing my hands in the air and abandoning the project. But it did mean putting the svg elements on the shelf for another day. In a few short hours, I had swapped out these complex svg graphics for simple PNG images that I could manipulating much easier using simple javascript callbacks and filters to change the colors. After that, the rest of the project went much more smoothly.
+After two days of work on this project (without really even getting started on the basic requirements), I decided that the most productive thing I could do was give up. Of course, this didn't mean throwing my hands in the air and abandoning the project. But it did mean putting the svg elements on the shelf for another day. In a few short hours, I had swapped out these complex svg graphics for simple PNG images that I could manipulate much easier using basic javascript callbacks and filters to change the colors. After that, the rest of the project went much more smoothly.
 
 So, remember, sometimes giving up really is the best option you have. Don't forget what you learned. Return to deeper waters another day. And maybe next time you'll be wise enough to turn around sooner rather than making one last doomed bet.
