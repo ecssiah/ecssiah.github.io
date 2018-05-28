@@ -8,7 +8,7 @@ permalink:  building_a_place_to_belong
 
 Small changes can sometimes have subtle effects that lead to frustrating bugs.
 
-When creating a migration with ActiveRecord, it is possible to define a column type that explicitly states that this model references another in a "belongs_to" relationship. It looks like this:
+When creating a migration with ActiveRecord, it is possible to define a column type that explicitly states a model references another model in a "belongs_to" relationship. It looks like this:
 
 ```ruby
 def change 
@@ -21,11 +21,11 @@ def change
 
 This is very similar to simply creating a column with an integer type and calling it "user_id". In fact, this migration will produce a model that has a field called `user_id`, which serves as a foreign key for the table that is referenced by the symbol, `:user`.
 
-But in the case of creating the integer column, it is only true that the column *can* be used as a foreign key. But a confusing bug in my application forced me to realize that the explicit `references` column type sets up a relationship that **must** be used as a foreign key.
+In the case of creating the integer column, it is only true that the column *can* be used as a foreign key. But a confusing bug in my application forced me to realize that the explicit `references` column type sets up a relationship that **must** be used as a foreign key.
 
 In other words, when I went to create or save a Story model, I was finding that the object was not being saved to the database. I carefully combed through the strong params I had defined for the model, and all of them were present and named correctly. But my model still wasn't being saved.
 
-The problem was that I was simply creating the Story model as a standalone object, like this:
+The problem was that I created the Story model as a standalone object, like this:
 
 ```
 story = Story.create(story_params)
