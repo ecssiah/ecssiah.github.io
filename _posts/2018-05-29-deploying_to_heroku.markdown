@@ -47,7 +47,7 @@ Next, you'll need to open `config/database.yml` in your application directory. T
 
 Change the default configuration to use the postgresql adapter (make sure to get the full name including the 'ql' at the end):
 
-```ruby
+```yaml
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -57,7 +57,7 @@ default: &default
 
 Now, update the configuration for each environment so that it uses the postgres user credentials you just created for your app.
 
-```ruby
+```yaml
 production:
   <<: *default
   database: app_name_production
