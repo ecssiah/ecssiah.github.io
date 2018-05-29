@@ -16,7 +16,7 @@ Next, you'll need to install the Heroku command line interface (CLI). You can ge
 brew install heroku/brew/heroku
 ```
 
-Log in to the CLI using the Heroku account you just set up using `heroku login`.
+Log in to the CLI using the Heroku account you just set up. This can be done by running `heroku login`.
 
 `cd` into the root directory of your Rails app. Make sure that your Rails app already has an active Git repository, and then create a new Heroku app by using: `heroku create app_name`, replacing `app_name` with the name you want to deploy your application under. This will set up a new git remote named `heroku` that will allow you to push your application up to the Heroku servers.
 
