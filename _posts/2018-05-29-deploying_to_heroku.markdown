@@ -86,7 +86,7 @@ config.assets.compile = true
 
 Finally, you need to run `bundle install` and then `bundle exec rake assets:precompile RAILS_ENV=production` to install the postgres gem and precompile your static assets for Heroku.
 
-You also need to run your migrations both locally and through the Heroku command line interface now that you are using postgres. You might need to drop your old database, and then run `rake db:migrate` to set up the new postgres database. You can run the same migrations for Heroku with `heroku run rake db:migrate`. Now you should have your database set up and all your assets ready for Heroku.
+You also need to run your migrations both locally and through the Heroku command line interface now that you are using postgres. You might need to drop your old database, and then run `rake db:migrate` to set up the new postgres database. You can run the same migrations for Heroku with `heroku run rake db:migrate`. One thing that might be a little confusing is that your postgres databases are no longer local files in your `db` folder. They are managed outside your application by postgres. You can see they have been created by using the Postgres app I mentioned at the beginning of this post. You should now have your database set up and all your assets ready for Heroku.
 
 The final step is to push your application to the Heroku remote. This is done exactly the same way you push to your own git remote.
 
@@ -94,11 +94,11 @@ The final step is to push your application to the Heroku remote. This is done ex
 git push heroku master
 ```
 
-If this works without errors, then you will be able to see your application successfully deployed by viewing your Heroku account. If it doesn't work, then you can view the build logs on your Heroku account. They will give you hints as to what is missing.
+If this works without errors, then you will be able to see your application successfully deployed by visiting the url it provides or viewing it from your Heroku account. If it doesn't work, then you can also view the build logs on your Heroku dashboard. They will give you hints as to what is missing.
 
-The last thing I'll mention is related to using OmniAuth in your application. You might remember that you needed to give your OmniAuth provider a client id and a client secret in order to authenticate users through their service. It is best practice to **not** push these credentials up to your application repository, because that would leave your application vulnerable. This means that Heroku will not immediately have access to this information, and that will prevent OmniAuth from working.
+The last thing I'll mention is related to using OmniAuth in your application. You might remember that you needed to give your OmniAuth provider a client id and a client secret in order to authenticate users through their service. It is best practice to **not** push these credentials up to your application repository, because that would leave your application vulnerable. This means that Heroku will not have access to this information, and that will prevent OmniAuth from working.
 
-The solution is simple. You can either add these environment variables directly with the [Heroku dashboard](https://devcenter.heroku.com/articles/config-vars) or you can use the command line. This is how you set them through the command line:
+The solution is simple. You can either add these environment variables directly with the [Heroku dashboard](https://devcenter.heroku.com/articles/config-vars), or you can use the command line. This is how you set them through the command line:
 
 ```
 heroku config:set KEY=VALUE
