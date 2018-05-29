@@ -50,9 +50,9 @@ Change the default configuration to use the postgresql adapter (make sure to get
 ```ruby
 default: &default
   adapter: postgresql
-	encoding: unicode
-	pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-	timeout: 5000
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
 ```
 
 Now, update the configuration for each environment so that it uses the postgres user credentials you just created for your app.
@@ -60,9 +60,9 @@ Now, update the configuration for each environment so that it uses the postgres 
 ```ruby
 production:
   <<: *default
-	database: app_name_production
-	username: app_name
-	password: password
+  database: app_name_production
+  username: app_name
+  password: password
 ```
 
 Once again, replace `app_name` and `password` with your own information, and also add this info to the configurations for the other environments. It's possible to continue using sqlite3 for your test and development environments, but it is not recommended. You might as well bite the bullet now and fully move to postgres. From the perspective of developing your app, there will be practically no differences, unless you absolutely need to write explicit SQL statements, but, even there, the differences are minimal.
