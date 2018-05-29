@@ -49,7 +49,7 @@ Change the default configuration to use the postgresql adapter (make sure to get
 
 ```ruby
 default: &default
-  adapter: postgresql	
+  adapter: postgresql
 	encoding: unicode
 	pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 	timeout: 5000
