@@ -77,7 +77,7 @@ config.serve_static_assets = false
 config.serve_static_assets = true
 ```
 
-`config/environments/production.rb`
+`config/environments/production.rb`:
 ```ruby
 # Add these two lines
 config.serve_static_files = true
