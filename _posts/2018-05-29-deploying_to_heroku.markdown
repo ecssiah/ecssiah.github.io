@@ -10,7 +10,7 @@ Heroku is a service that allows you to host your application publicly for free. 
 
 The first thing you'll need is a [Heroku account](https://signup.heroku.com/login).
 
-Next, you'll need to install the Heroku command line interface (CLI). You can get them directly from brew or use the installer [on their site](https://devcenter.heroku.com/articles/heroku-cli):
+Next, you'll need to install the Heroku command line tools. You can get them directly from brew or use the installer [on their site](https://devcenter.heroku.com/articles/heroku-cli):
 
 ```bash
 brew install heroku/brew/heroku
