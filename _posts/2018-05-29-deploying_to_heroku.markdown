@@ -22,7 +22,7 @@ Log in to the CLI using the Heroku account you just set up. This can be done by 
 
 There are a few things you have to do before pushing your code to Heroku. Heroku requires that your application runs on a postgres database, as opposed to the default sqlite3 database set up by Rails.
 
-There are a couple steps involved in moving to postgres. It is not essential, but installing the [Postgres app](https://postgresapp.com/) for mac is helpful. It allows you to easily start up the postgres server and keep track of the databases you create. You'll also need to make sure you install postgres on your machine. This can also be done through brew with: `brew install postgresql`.
+There are a couple steps involved in moving to postgres. It is not essential, but installing the [Postgres app](https://postgresapp.com/) for mac is helpful. It allows you to easily start up the postgres server and keep track of the databases you create. You'll need to make sure you install postgres on your machine. This can also be done through brew with: `brew install postgresql`.
 
 The first step in switching your application over is to remove the sqlite3 gem and replace it with the postgres gem.
 
