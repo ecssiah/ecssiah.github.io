@@ -7,7 +7,7 @@ permalink:  location_location_location
 
 I thought I would use this blog post to quickly cover a few different topics I came across while building a rails app with a JQuery frontend. They all broadly address the need to really understand the importance of where elements of an application are located in relation to each other.
 
-* Turbolinks
+**Turbolinks**
 
 Turbolinks is a javascript library that is enabled by default when creating a new Rails application. This library speeds up the loading of views in the application by replacing some of the normal requests with AJAX requests. This allows a rails developer to get some of the benefits of a single-page application without needing to write a client-side Javascript framework. 
 
@@ -29,8 +29,7 @@ As of Rails 5, this will also be called on the initial load of the page, so ther
 $(document.on('ready turbolinks:load', function() { ... };
 ```
 
-
-* Page-specific javascript
+**Page-specific javascript**
 
 There are a number of different ways to get javascript functions to run only on specific pages, but they each involve understanding some nuances.
 
@@ -58,7 +57,7 @@ window.build_story_index = function() {
 
 It is not necessary for the functions used inside of this global function to also be global. These functions just need to be available in the same file where the global function is being defined.
 
-* Html5 History API
+**Html5 History API**
 
 The last thing I'll cover is the new History API that has been added with Html5. This solved an old problem that had arisen once javascript was being used to make significant changes to a web page. Often, the page would be changed to such a degree that it would make sense to update the URL that is being displayed, even though no actual page reload had occurred. [This excellent article](https://css-tricks.com/using-the-html5-history-api/) from css-tricks explains the history behind this problem, and mentions some of the workarounds people had developed to deal with it before the History API was introduced. The whole article is worth reading, but, in reality, to make use of the History API, you'll likely only need to know one main function.
 
