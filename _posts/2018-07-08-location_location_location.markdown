@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Location, Location, Location"
-date:       2018-07-08 07:25:19 +0000
+date:       2018-07-08 03:25:20 -0400
 permalink:  location_location_location
 ---
 
@@ -26,8 +26,9 @@ $(document).on('turbolinks:load', function() {
 As of Rails 5, this will also be called on the initial load of the page, so there is no need to also hook into the `document.ready` function. For previous versions, it is sometimes necessary to attach your load function to both events, like this:
 
 ```
-$(document.on('ready turbolinks:load', function() {
+$(document.on('ready turbolinks:load', function() { ... };
 ```
+
 
 * Page-specific javascript
 
