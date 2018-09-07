@@ -1,18 +1,18 @@
 ---
 layout: post
-title:      "Keeping Time"
-date:       2018-09-07 18:25:37 +0000
+title:      "Keeping Time in React/Redux"
+date:       2018-09-07 14:25:37 -0400
 permalink:  keeping_time
 ---
 
 
-Utilizing redux's action/reducer system and some built-in javascript functionality, it is possible to create actions that continue to update in the background of a react app, but there are some details that need to be considered to avoid errors.
+Utilizing Redux's action/reducer system and some built-in javascript functionality, it is possible to create actions that continue to update in the background of a React app, but there are some details that need to be considered to avoid errors.
 
 Javascript has a collection of functions that are attached to the main window object that allow a custom function to be executed at regular intervals. This is nice, because in many other programming environments this framework usually has to be built or included manually. Anyone who has ever tried to write a game immediately comes up against this problem with producing a consistent callback feature for updating the game.
 
 The javascript window object contains two matching matching timing functions: `setInterval` and `clearInterval`. `setInterval` is used to begin a regular callback, and clear interval is used to end this cycle. There is another related function called `setTimeout` that allows a function to be called *once* after a specified interval of time has elapsed.
 
-I was working on a react app that required a countdown timer that would allow me to dispatch actions and update the redux state on every "tick" of the timer. The first thing I did was set up a button that allowed me to start the timer. In the `onClick` handler for that button is where I made the call to `setInterval`.
+I was working on a React app that required a countdown timer that would allow me to dispatch actions and update the redux state on every "tick" of the timer. The first thing I did was set up a button that allowed me to start the timer. In the `onClick` handler for that button is where I made the call to `setInterval`.
 
 The `setInterval` function take two arguments. The first is the callback function you want executed every cycle, and the second is the length of the interval you want between each call in milliseconds. Therefore, if you want a function called `this.handleTimerUpdate` to be called every second, you would make this call:
 
