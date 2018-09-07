@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Transcending the Buddhabrot"
-date:       2018-09-07 18:00:26 +0000
+date:       2018-09-07 14:00:27 -0400
 permalink:  transcending_the_buddhabrot
 ---
 
@@ -14,13 +14,13 @@ An array of counters is used to track every point that is hit before a sample po
 
 After a large number of points have been tested, this array of counters is used as a heat map to produce the image. Each count is divided by the largest value in the counters array, so that the largest value has a value of 1. This will be the brightest pixel in the image. All other pixels will have a brightness value somewhere between 0 and 1.
 
-Here is Melinda's own page describing her process and displaying a number of examples: http://superliminal.com/fractals/bbrot/bbrot.htm
+Here is Melinda's own page describing her process and displaying a number of examples: [Superliminal: Buddhabrot](http://superliminal.com/fractals/bbrot/bbrot.htm)
 
 I wrote an application that expands her original technique.
 
-Here is an animation I produced using my technique: https://www.youtube.com/watch?v=NHzehXtsRbo
+Here is an animation I produced using my technique: [Green Fractals](https://www.youtube.com/watch?v=NHzehXtsRbo)
 
-And here is the repo containing my implementation: https://github.com/ecssiah/green-fractals
+And here is the repo containing my implementation: [Green Fractals Repo](https://github.com/ecssiah/green-fractals)
 
 Contributions are welcome!
 
