@@ -25,7 +25,7 @@ The `setInterval` function returns a reference to the timer that needs to be hel
 ```
 this.setState({
   timer: setInterval(this.handleTimerUpdate, 1000),
-	...this.state,
+  ...this.state,
 })
 ```
 
@@ -36,10 +36,10 @@ A rough version of what I did was this:
 ```
 handleTimerUpdate() {
   if (this.state.timer < SECOND) {
-	  clearInterval(this.state.timer)
-	} else {
-	  // do other updating based on tick
-	}
+    clearInterval(this.state.timer)
+  } else {
+    // do other updating based on tick
+  }
 }
 ```
 
@@ -54,7 +54,7 @@ In my case, this also offered an excellent chance to quickly persist any changes
 ```
 componentWillUnmount() {
   clearInterval(this.state.timer)
-	this.props.saveFocus(this.props.focus)
+  this.props.saveFocus(this.props.focus)
 }
 ```
 
