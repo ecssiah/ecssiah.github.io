@@ -1,15 +1,14 @@
 # Site settings
+author: Michael Chapman
 title: Righting Code
 header-img: img/home-bg.png
 email: ecssiah@gmail.com
-copyright_name: ecssiah
+copyright_name: Michael Chapman
 description: > # this means to ignore newlines until "baseurl:"
   An exploration of the process
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  ecssiah
-learn_profile: ecssiah
-email_username: ecssiah@gmail.com
 
 # Build settings
 markdown: kramdown
