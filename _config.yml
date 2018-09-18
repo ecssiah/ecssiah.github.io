@@ -7,7 +7,7 @@ copyright_name: Michael Chapman
 description: > # this means to ignore newlines until "baseurl:"
   An exploration of the process
 baseurl: "" # the subpath of your site, e.g. /blog
-twitter_username: 
+twitter_username: _ecssiah_
 github_username:  ecssiah
 
 # Build settings
