@@ -86,6 +86,8 @@ config.assets.compile = true
 
 Finally, you need to run `bundle install` and then `bundle exec rake assets:precompile RAILS_ENV=production` to install the postgres gem and precompile your static assets for Heroku.
 
+It is possible that you will not have access to the `assets:precompile` task. Check the `config/application.rb` file to make sure that `require "sprockets/railtie"` is not commented out. If it is commented out or missing entirely, then add this line to access this task.
+
 You also need to run your migrations both locally and through the Heroku command line interface now that you are using postgres. You might need to drop your old database, and then run `rake db:migrate` to set up the new postgres database. You can run the same migrations for Heroku with `heroku run rake db:migrate`. One thing that might be a little confusing is that your postgres databases are no longer local files in your `db` folder. They are managed outside your application by postgres. You can see they have been created by using the Postgres app I mentioned at the beginning of this post. You should now have your database set up and all your assets ready for Heroku.
 
 The final step is to push your application to the Heroku remote. This is done exactly the same way you push to your own git remote.
