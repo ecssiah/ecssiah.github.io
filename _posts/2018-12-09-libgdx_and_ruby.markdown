@@ -358,7 +358,7 @@ Other than that, the only tricky part may be how the tint is calculated. Instead
 MATH_SECTION
 
 The decay function kind of looks like a roller coaster drop and makes a nice natural fall off in brightness. It would look like this for 6 layers.
-
+```
 Layer 6    |
 Layer 5    ||
 Layer 4    |||
@@ -366,7 +366,7 @@ Layer 3    |||||
 Layer 2    ||||||||||
 Layer 1    |||||||||||||||||||
 Layer 0    ||||||||||||||||||||||||||||||||||||
-
+```
 Since the layers are rendered from the bottom up, I use (@numLayers - 1 - i) for the argument to the function. This is so that the tint starts dark and becomes brightest when it is at the final, or closest, layer. It contains the - 1 we avoided by using 0...6 instead of 0..6. So on the "graph" as we render the layers it starts at the bottom right and works towards the top left increasing in brightness. Really we are going backwards through the function. This is why you need (@numLayers - 1 - i) instead of just i as the argument. You could also just resort the layers, but you'll find that you then have to go backwards through them to render and do other things with them since you draw to the screen from the back to the front. If you substitute the index of the final layer, i = @numLayers - 1, into the function you get:
 ```
 Math.exp(-0.22 * (@numLayers - 1 - (@numLayers - 1)))
