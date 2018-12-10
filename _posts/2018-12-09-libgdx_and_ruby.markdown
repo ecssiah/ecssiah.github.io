@@ -338,7 +338,6 @@ for i in 0...@numLayers
       @player.draw(@batch)
     end
   @batch.end
-  
 end
 ```
 This method for rendering the layers displays a nice Ruby feature.
