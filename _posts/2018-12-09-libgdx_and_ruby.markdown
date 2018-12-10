@@ -151,16 +151,13 @@ GameScreen.rb:
   ...
         
   def render(delta)
-    
     Gdx.gl.glClearColor(0, 0, 0, 1)
     Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
 
     @renderer.setView(@cam)
     
     @renderer.render
-    
   end
-  
   
   def resize(width, height)
   end
@@ -176,7 +173,6 @@ GameScreen.rb:
   
   def dispose()
   end
-
 end
 ```
 You need to declare the implemented methods from Screen. I think in Java it ignores them if they are missing. Also, notice that Ruby pretty much treats all numbers the same. No more f's all over the place or issues with whether or not you sent a float or an int to a method. If you need to convert something there are short little methods built in along with basic math functions.
