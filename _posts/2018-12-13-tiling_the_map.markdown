@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Tiling The Map"
-date:       2018-12-14 02:36:34 +0000
+date:       2018-12-13 21:36:35 -0500
 permalink:  tiling_the_map
 ---
 
@@ -29,7 +29,8 @@ To store map information, I used a struct that contained an `unordered_map<strin
 In the `MapSystem`, there is a function that sets the information for each active tile in the map.
 
 ```
-void MapSystem::SetTile(string layer, int x, int y, string type) {                 
+void MapSystem::SetTile(string layer, int x, int y, string type) 
+{                 
   Tile& tile = map_.layers[layer].tiles[x][y];                                     
   tile.active = true;                                                              
                                                                                    
