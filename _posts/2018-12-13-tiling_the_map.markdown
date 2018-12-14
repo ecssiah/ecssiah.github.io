@@ -6,7 +6,7 @@ permalink:  tiling_the_map
 ---
 
 
-A common way to generate a large map for an interactive application is to build it from a set of tiles. This is a classic technique for generating complex maps while limiting the amount of texture resources that are required. This post will cover the tiling approach I've used for the Last Ditch open source simulation application. It is available here: https://github.com/ecssiah/last-ditch.
+A common way to generate a large map for an interactive application is to build it from a set of tiles. This is a classic technique for generating complex maps while limiting the amount of texture resources that are required. This post will cover the tiling approach I've used for the Last Ditch open source simulation application. It is available here: [Last Ditch Repo](https://github.com/ecssiah/last-ditch).
 
 The first step is to generate some tilesets to be used for the map. Only one tileset is required, but I have used multiple tilesets, one for each category of tiles in the application. I have a `map_tileset` that holds all the tiles which make up elements like the floor and walls of the map. There is another that called `obj_tileset` that contains the tiles related to objects placed on the map. In Last Ditch, everything is a tile. This is generally not the case in most applications that use tile maps. They will usually generate the map using tiles, but then overlay other sprites on top of the map. The method used in this post can still be used for those applications, but more rendering would be done on top of the tile rendering.
 
